@@ -3,31 +3,31 @@ package com.libreriapropia.libros.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="Libro")
-public class Libro {
+@Document(collection="Book")
+public class Book {
 
 	@Id
-	private Integer id;
+	private Long id;
 	private String name;
-	private String autor;
+	private String author;
 	private String editorial;
 	
-	public Libro() {
+	public Book() {
 		super();
 	}
 	
-	public Libro(Integer id, String name, String autor, String editorial) {
+	public Book(Long id, String name, String author, String editorial) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.autor = autor;
+		this.author = author;
 		this.editorial = editorial;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -36,11 +36,11 @@ public class Libro {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getAutor() {
-		return autor;
+	public String getAuthor() {
+		return author;
 	}
-	public void setAutor(String autor) {
-		this.autor = autor;
+	public void setAuthor(String author) {
+		this.author = author;
 	}
 	public String getEditorial() {
 		return editorial;
@@ -51,7 +51,7 @@ public class Libro {
 
 	@Override
 	public String toString() {
-		return "Libro [id=" + id + ", name=" + name + ", autor=" + autor + ", editorial=" + editorial + "]";
+		return "Libro [id=" + id + ", name=" + name + ", author=" + author + ", editorial=" + editorial + "]";
 	}
 	
 	
